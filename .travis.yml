@@ -1,8 +1,6 @@
 language: php
 
 php:
-  - 5.6
-  - 7.0
   - 7.1
   - 7.2
   - 7.3
@@ -12,6 +10,9 @@ matrix:
   fast_finish: true
   allow_failures:
     - php: nightly
+  include:
+    - php: 7.1
+      env: MINIMUM_VERSIONS=true
 
 sudo: false
 
@@ -19,7 +20,8 @@ before_install:
   - travis_retry composer self-update
 
 install:
-  - travis_retry composer install --no-interaction --prefer-source
+  - if [[ $MINIMUM_VERSIONS = false ]]; then travis_retry composer install; fi
+  - if [[ $MINIMUM_VERSIONS = true ]]; then travis_retry composer update --no-interaction --prefer-lowest; fi
 
 script:
   - ./vendor/bin/phpcs --standard=psr2 src/
