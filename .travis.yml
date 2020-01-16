@@ -1,5 +1,12 @@
 language: php
 
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+
+env: MINIMUM_VERSIONS=false
+
 php:
   - 7.1
   - 7.2
