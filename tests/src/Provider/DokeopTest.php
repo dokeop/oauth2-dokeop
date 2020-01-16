@@ -44,7 +44,7 @@ class DokeopTest extends TestCase
     {
         $options = ['scope' => [uniqid(), uniqid()]];
         $url     = $this->provider->getAuthorizationUrl($options);
-        $this->assertStringContainsString(urlencode(implode(',', $options['scope'])), $url);
+        $this->assertContains(urlencode(implode(',', $options['scope'])), $url);
     }
 
     public function testGetAuthorizationUrl()
