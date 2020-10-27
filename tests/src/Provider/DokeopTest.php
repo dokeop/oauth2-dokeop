@@ -1,5 +1,5 @@
 <?php
-namespace League\OAuth2\Client\Test\Provider;
+namespace Dokeop\OAuth2\Client\Test\Provider;
 
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
@@ -11,7 +11,7 @@ class DokeopTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->provider = new \League\OAuth2\Client\Provider\Dokeop(
+        $this->provider = new \Dokeop\OAuth2\Client\Provider\Dokeop(
             [
                 'clientId'     => 'mock_client_id',
                 'clientSecret' => 'mock_secret',
@@ -82,7 +82,7 @@ class DokeopTest extends TestCase
 
     public function testDokeopDomainUrls()
     {
-        $provider = new \League\OAuth2\Client\Provider\Dokeop([
+        $provider = new \Dokeop\OAuth2\Client\Provider\Dokeop([
             'apiVersion' => $this->apiVersion
         ]);
 

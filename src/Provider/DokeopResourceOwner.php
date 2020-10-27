@@ -1,5 +1,5 @@
 <?php
-namespace League\OAuth2\Client\Provider;
+namespace Dokeop\OAuth2\Client\Provider;
 
 class DokeopResourceOwner implements ResourceOwnerInterface
 {

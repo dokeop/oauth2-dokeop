@@ -19,10 +19,10 @@ $ composer require dokeop/oauth2-dokeop
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\League\OAuth2\Client\Provider\Dokeop` as the provider.
+Usage is the same as The League's OAuth client, using `\Dokeop\OAuth2\Client\Provider\Dokeop` as the provider.
 
 ``` php
-$provider = new League\OAuth2\Client\Provider\Dokeop([
+$provider = new Dokeop\OAuth2\Client\Provider\Dokeop([
     'clientId'     => '{dokeop-client-id}',
     'clientSecret' => '{dokeop-client-secret}',
     'redirectUri'  => 'https://example.com/callback-url',
